@@ -214,6 +214,22 @@
   .carousel-control-prev{
     width: 33%;
   }
+
+  /* typography */
+  h2 {
+    font-size: 2.2rem;
+    color: white;
+  }
+  .lead{
+    font-size: 1rem;
+  }
+  #prev, #next {
+    font-size: 0.9rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  
 </style>
 
 <body>
@@ -274,7 +290,7 @@
         style="background-image: url(./assets/images/icon\ left.svg);">
       </span>
       <br>
-      <span>بازی</span>
+      <span id="prev">بازی</span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"
       style="display: -webkit-inline-box;">
@@ -282,7 +298,7 @@
         style="background-image: url(./assets/images/icon\ right.svg);">
       </span>
       <br>
-      <span>داشبورد</span>
+      <span id="next">داشبورد</span>
     </a>
   </div>
 </body>
