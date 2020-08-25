@@ -41,9 +41,53 @@
 <!-- Custom Forever Styles -->
 <style>
   #sectionIcon {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    border: dotted;
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    display: grid;
+    justify-content: center;
+  }
+
+  @font-face {
+    font-family: 'iranYekanWebLight';
+    src: url('./assets/fonts/iranyekanweblight.woff');
+  }
+
+  @font-face {
+    font-family: 'iranYekanWebBold';
+    src: url('./assets/fonts/iranyekanwebbold.woff');
+  }
+
+  @font-face {
+    font-family: 'iranYekanWebRegular';
+    src: url('./assets/fonts/iranyekanwebregular.woff');
+  }
+
+  body {
+    font-family: 'iranYekanWebRegular';
+    direction: rtl;
+  }
+
+  /* Waiting For SVG */
+  /* #controlPrev{
+    background: black;
+    padding: 1rem;
+    border-radius: 50%;
+  } */
+
+  .mainIcon {
+    padding: 6rem;
+    border: 1px solid;
+  }
+
+
+
+  /* circle modules */
+
+  #sectionIcon {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    display: grid;
+    justify-content: center;
   }
 
   @font-face {
@@ -93,11 +137,76 @@
     vertical-align: middle;
     display: table-cell;
   }
+
+
+
+  /* circle modules */
+  .module {
+    position: relative;
+    width: 303px;
+    height: 303px;
+    background: #f06d06;
+    z-index: -1;
+    border-radius: 50%;
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+    stroke: red;
+    stroke-width: 3;
+    filter: drop-shadow(0 6mm 0.75rem rgba(0, 0, 0, 0.1));
+  }
+
+  .cir1 {
+    background-color: yellow;
+    height: 274px;
+    width: 274px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+    filter: drop-shadow(0 6mm 0.75rem rgba(0, 0, 0, 0.1));
+  }
+
+  .cir2 {
+    background: yellowgreen;
+    height: 246px;
+    width: 246px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+    filter: drop-shadow(0 6mm 0.75rem rgba(0, 0, 0, 0.1));
+
+  }
+
+
+  .cir3 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  /* End of Circle Module */
+  #carouselExampleIndicators {
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+  }
+  .btn{
+    padding-right: 10vw;
+    padding-left: 10vw;
+    border: 2px solid rgba(0,0,0, 0.4)
+  }
 </style>
 
 <body>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: coral;">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <!-- Game@Mahak -->
@@ -108,10 +217,38 @@
                 <h2>بازی کنید، هدیه بگیرید</h2>
                 <p class="lead mb-5">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب نمایید!</p>
                 <div id="sectionIcon">
-                  <img class="rounded-circle mb-2 mainIcon" src="./assets/images/dices-circle.png"
-                    data-holder-rendered="true" alt="geooo">
+                  <div class="module">
+                    <div class="cir1"></div>
+                    <div class="cir2"></div>
+                    <div class="cir3">
+                      <img src="./assets/images/dices-circle.png" alt="dice">
+                    </div>
+                  </div>
                 </div>
                 <a class="btn btn-light btn-xl js-scroll-trigger" href="#">بازی کنید</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="carousel-item">
+        <!-- Test@Mahak -->
+        <section class="content-section">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <h2>امتیاز خود را در این بخش مشاهده نمایید</h2>
+                <p class="lead mb-5">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب نمایید!</p>
+                <div id="sectionIcon">
+                  <div class="module">
+                    <div class="cir1"></div>
+                    <div class="cir2"></div>
+                    <div class="cir3">
+                      <img src="./assets/images/square.png" alt="dice">
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#">خرج امتیاز</a>
               </div>
             </div>
           </div>
