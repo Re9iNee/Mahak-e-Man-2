@@ -1,0 +1,220 @@
+#sectionIcon {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    display: grid;
+    justify-content: center;
+}
+
+body {
+    font-family: 'iranYekanWebRegular';
+    direction: rtl;
+}
+
+.mainIcon {
+    padding: 6rem;
+}
+
+
+
+/* circle modules */
+
+#sectionIcon {
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
+    display: grid;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'iranYekanWebLight';
+    src: url('../fonts/iranyekanweblight.woff');
+}
+
+@font-face {
+    font-family: 'openSansLight';
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'iranYekanWebBold';
+    src: url('../fonts/iranyekanwebbold.woff');
+}
+
+@font-face {
+    font-family: 'iranYekanWebRegular';
+    src: url('../fonts/iranyekanwebregular.woff');
+}
+
+body {
+    font-family: 'iranYekanWebRegular';
+    direction: rtl;
+}
+
+
+.mainIcon {
+    padding: 6rem;
+}
+
+.circle {
+    background: red;
+    border-radius: 50%;
+    color: white;
+    height: 100px;
+    font-weight: bold;
+    width: 100px;
+    display: table;
+    margin: 20px auto;
+}
+
+.circle img {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+
+
+/* circle modules */
+.module {
+    position: relative;
+    width: 303px;
+    height: 303px;
+    background: #f06d06;
+    z-index: -1;
+    border-radius: 50%;
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+    filter: drop-shadow(0 10mm 3rem rgba(0, 0, 0, 0.1));
+}
+
+.cir1 {
+    background-color: yellow;
+    height: 274px;
+    width: 274px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+    filter: drop-shadow(0 15mm 3rem rgba(0, 0, 0, 0.1));
+}
+
+.cir2 {
+    background: yellowgreen;
+    height: 246px;
+    width: 246px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
+    filter: drop-shadow(0 10mm 3rem rgba(0, 0, 0, 0.1));
+
+}
+
+
+.cir3 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* End of Circle Module */
+
+
+#carouselExampleIndicators {
+    background: rgb(255, 203, 5);
+    background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(253, 189, 13, 1) 50%, rgba(250, 166, 26, 1) 100%);
+}
+
+.btn {
+    padding-right: 7vw;
+    padding-left: 7vw;
+    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.3));
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+}
+
+#score {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    padding: 1.5rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 33%;
+}
+
+/* typography */
+h2 {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.lead {
+    font-size: 1rem;
+}
+
+#prev,
+#next {
+    font-size: 0.9rem;
+}
+
+.btn {
+    font-size: 1rem;
+}
+
+.timerHeader {
+    font-size: 1rem;
+}
+
+.timerNumbers {
+    font-size: 14px;
+    font-family: 'openSansLight';
+}
+
+.timerFooter {
+    font-size: 0.6rem;
+}
+
+
+/* timerModule */
+.myBadge {
+    border-radius: 50%;
+    padding: 1vw;
+}
+
+/* Custom Colors */
+.bg-brown {
+    background-color: #CE8409
+}
+
+.txt-brown {
+    color: #CE8409;
+}
+
+.txt-white {
+    color: white;
+}
+
+.timerTexts {
+    color: white;
+    font-size: 1rem;
+}
+
+.myCol {
+    text-align: center;
+}
