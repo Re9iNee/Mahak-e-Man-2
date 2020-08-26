@@ -90,6 +90,11 @@
   }
 
   @font-face {
+    font-family: 'openSansLight';
+    src: url('./assets/fonts/OpenSans-Light.ttf');
+  }
+
+  @font-face {
     font-family: 'iranYekanWebBold';
     src: url('./assets/fonts/iranyekanwebbold.woff');
   }
@@ -176,6 +181,7 @@
     right: 50%;
     transform: translate(50%, -50%);
   }
+
   /* End of Circle Module */
 
 
@@ -199,11 +205,13 @@
     font-size: 28px;
   }
 
-  .carousel-control-prev-icon, .carousel-control-next-icon {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
     padding: 1.5rem;
   }
+
   .carousel-control-next,
-  .carousel-control-prev{
+  .carousel-control-prev {
     width: 33%;
   }
 
@@ -212,16 +220,61 @@
     font-size: 2.2rem;
     color: white;
   }
-  .lead{
+
+  .lead {
     font-size: 1rem;
   }
-  #prev, #next {
+
+  #prev,
+  #next {
     font-size: 0.9rem;
   }
+
   .btn {
     font-size: 1rem;
   }
-  
+
+  .timerHeader {
+    font-size: 1rem;
+  }
+
+  .timerNumbers {
+    font-size: 14px;
+    font-family: 'openSansLight';
+  }
+
+  .timerFooter {
+    font-size: 0.6rem;
+  }
+
+
+  /* timerModule */
+  .myBadge {
+    border-radius: 50%;
+    padding: 1vw;
+  }
+
+  /* Custom Colors */
+  .bg-brown {
+    background-color: #CE8409
+  }
+
+  .txt-brown {
+    color: #CE8409;
+  }
+
+  .txt-white {
+    color: white;
+  }
+
+  .timerTexts {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .myCol {
+    text-align: center;
+  }
 </style>
 
 <body>
@@ -235,7 +288,7 @@
             <div class="row">
               <div class="col-lg-10 mx-auto">
                 <h2>بازی کنید، هدیه بگیرید</h2>
-                <p class="lead mb-5">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب نمایید!</p>
+                <p class="lead mb-5 txt-brown">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب نمایید!</p>
                 <div id="sectionIcon">
                   <div class="module">
                     <div class="cir1"></div>
@@ -258,7 +311,7 @@
             <div class="row">
               <div class="col-lg-10 mx-auto">
                 <h2>تک خط </h2>
-                <p class="lead mb-5">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب نمایید!</p>
+                <p class="lead mb-5 txt-brown">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب نمایید!</p>
                 <div id="sectionIcon">
                   <div class="module">
                     <div class="cir1"></div>
@@ -277,7 +330,7 @@
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"
-      style="display: -webkit-inline-box;">
+      style="display: -webkit-inline-box; z-index: 2;">
       <span class="carousel-control-prev-icon" aria-hidden="true"
         style="background-image: url(./assets/images/icon\ left.svg);">
       </span>
@@ -292,6 +345,39 @@
       <br>
       <span id="next">داشبورد</span>
     </a>
+    <div
+      style="display: table-row-group;position: absolute;bottom: 0;left: 0; padding: 0.7vw;padding-left: 3.7vw;padding-bottom: 2.7vw; z-index: 1;"
+      class="">
+      <div class="row timerHeader">
+        <div class="col myCol txt-brown">
+          زمان تا قرعه کشی
+        </div>
+      </div>
+      <div class="row timerNumbers" style="padding-bottom: 0.3rem;
+      padding-top: 0.3rem;
+">
+        <div class="col myCol" style="padding: 0;">
+          <span class="badge myBadge bg-brown timerTexts" id="minutes">29</span>
+        </div>
+        <div class="col no-gutters myCol" style="padding: 0;">
+          <span class="badge myBadge bg-brown timerTexts" id="hours">59</span>
+        </div>
+        <div class="col myCol" style="padding: 0;">
+          <span class="badge myBadge bg-brown timerTexts" id="days">23</span>
+        </div>
+      </div>
+      <div class="row txt-white timerFooter">
+        <div class="col myCol">
+          <span>دقیقه</span>
+        </div>
+        <div class="col myCol">
+          <span>ساعت</span>
+        </div>
+        <div class="col myCol">
+          <span>روز</span>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
