@@ -20,9 +20,17 @@
   <!-- Custom Style -->
   <link rel="stylesheet" href="./assets/css/stylish.css">
   <link rel="stylesheet" href="./assets/css/custome.css">
-  <!-- final test  -->
-
-  <title>Document</title>
+  <!-- Custom JavaScript Files -->
+  <script>
+    const url = document.location.href;
+    const regex = /\?PackageNo=(\d+)/
+    const packageNumber = url.match(regex)[1];
+  </script>
+  <script src="./assets/js/timerCounter.js"></script>
+  <script src="./assets/js/token.js"></script>
+  <script src="./assets/js/getScore.js"></script>
+  <script src="./assets/js/carousel.js"></script>
+  <title>Mahak e Man 2</title>
 </head>
 
 
@@ -73,7 +81,7 @@
                     </div>
                   </div>
                 </div>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#">خرج امتیاز</a>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://customerclub.mahaksoft.com/">خرج امتیاز</a>
               </div>
             </div>
           </div>
@@ -131,9 +139,4 @@
     </div>
   </div>
 </body>
-
-<script>
-
-</script>
-
 </html>
