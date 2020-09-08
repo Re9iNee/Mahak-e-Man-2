@@ -6371,13 +6371,31 @@ button.close {
     -ms-flex-align: center;
     align-items: center;
     width: 100%;
-    transition: -webkit-transform .6s ease;
-    transition: transform .6s ease;
+    /* transition: -webkit-transform 2s ease; */
+    /* transition: transform 2s ease; */
     transition: transform .6s ease, -webkit-transform .6s ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000px;
     perspective: 1000px
+}
+
+.carousel-item .module {
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease, opacity .5s ease;
+}
+
+.carousel-item h2 {
+    transition: opacity .5s ease;
+}
+
+.carousel-item p {
+    transition: opacity .5s ease;
+}
+
+.carousel-item .btn {
+    transition: opacity .5s ease;
 }
 
 .carousel-item-next,
@@ -6392,46 +6410,84 @@ button.close {
     top: 0
 }
 
-.carousel-item-next.carousel-item-left,
-.carousel-item-prev.carousel-item-right {
+.carousel-item-next.carousel-item-left .module,
+.carousel-item-prev.carousel-item-right .module{
     -webkit-transform: translateX(0);
     transform: translateX(0)
 }
 
+
+
 @supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
 
-    .carousel-item-next.carousel-item-left,
-    .carousel-item-prev.carousel-item-right {
+    .carousel-item-next.carousel-item-left .module,
+    .carousel-item-prev.carousel-item-right .module {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0)
     }
 }
-
-.active.carousel-item-right,
-.carousel-item-next {
+.active.carousel-item-right .module,
+.carousel-item-next .module {
     -webkit-transform: translateX(100%);
-    transform: translateX(100%)
+    /* to the right triggers when press previous */
+    /* border: double green 10px; */
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+
+.active.carousel-item-right h2,
+.carousel-item-next h2 {
+    opacity: 0;
+}
+
+.active.carousel-item-right p,
+.carousel-item-next p {
+    opacity: 0;
+}
+
+.active.carousel-item-right .btn,
+.carousel-item-next .btn {
+    opacity: 0;
 }
 
 @supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
 
-    .active.carousel-item-right,
-    .carousel-item-next {
+    .active.carousel-item-right .module,
+    .carousel-item-next .module {
         -webkit-transform: translate3d(100%, 0, 0);
         transform: translate3d(100%, 0, 0)
     }
 }
 
-.active.carousel-item-left,
-.carousel-item-prev {
+.active.carousel-item-left .module,
+.carousel-item-prev .module {
     -webkit-transform: translateX(-100%);
-    transform: translateX(-100%)
+    /* to the left triggers when press next*/
+    /* border: 10px solid coral; */
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.active.carousel-item-left h2,
+.carousel-item-prev h2 {
+    opacity: 0;
+}
+
+.active.carousel-item-left p,
+.carousel-item-prev p {
+    opacity: 0;
+}
+
+.active.carousel-item-left .btn,
+.carousel-item-prev .btn {
+    opacity: 0;
 }
 
 @supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
 
-    .active.carousel-item-left,
-    .carousel-item-prev {
+    .active.carousel-item-left .module,
+    .carousel-item-prev .module {
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0)
     }
