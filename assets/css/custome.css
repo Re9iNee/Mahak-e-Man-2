@@ -218,3 +218,42 @@ h2 {
 .myCol {
     text-align: center;
 }
+
+
+/* centering via Flex */
+#content-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    min-height: 80vh;
+}
+
+/* Circle Animations */
+/* .cir2 {
+    animation: scale 1s alternate infinite ease;
+    animation-delay: 900ms;
+}
+@-webkit-keyframes scale {
+    from {}
+
+    to {
+        width: 253px;
+        height: 253px;
+    }
+}
+
+.cir1 {
+    animation: scale2 1s alternate infinite ease;
+    animation-delay: 300ms;
+}
+@-webkit-keyframes scale2 {
+    from {}
+
+    to {
+        width: 288px;
+        height: 288px;
+    }
+} */

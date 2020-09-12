@@ -1,42 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- jQuery And Popper -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+  <script src="./assets/offloadLibs/jquery-3.2.1.slim.min.js"></script>
+  <script src="./assets/offloadLibs/popper.min.js"></script>
   <!-- boostrap library -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="./assets/bootstrap lib/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="./assets/bootstrap lib/bootstrap.min.css">
+  <script src="./assets/offloadLibs/bootstrap.min.js"></script>
+  <!-- AngularJS -->
+  <script src="./assets/offloadLibs/angular.min.js"></script>
   <!-- Custom Style -->
   <link rel="stylesheet" href="./assets/css/stylish.css">
   <link rel="stylesheet" href="./assets/css/custome.css">
-  <!-- Custom JavaScript Files -->
-  <script>
-    const url = document.location.href;
-    const regex = /\?PackageNo=(\d+)/
-    const packageNumber = url.match(regex)[1];
-  </script>
-  <script src="./assets/js/timerCounter.js"></script>
-  <script src="./assets/js/token.js"></script>
-  <script src="./assets/js/getScore.js"></script>
-  <script src="./assets/js/carousel.js"></script>
   <title>Mahak e Man 2</title>
 </head>
 
 
-<body>
-
+<body ng-app="myApp" ng-controller="myCtrl">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -44,9 +28,10 @@
         <section class="content-section">
           <div class="container text-center">
             <div class="row">
-              <div class="col-lg-10 mx-auto">
+              <div class="col-lg-10 mx-auto" id="content-center">
                 <h2>بازی کنید، هدیه بگیرید</h2>
-                <p class="lead txt-brown">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب
+                <p class="lead txt-brown">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی
+                  را کسب
                   نمایید!</p>
                 <div id="sectionIcon">
                   <div class="module">
@@ -68,21 +53,47 @@
         <section class="content-section">
           <div class="container text-center">
             <div class="row">
-              <div class="col-lg-10 mx-auto">
+              <div class="col-lg-10 mx-auto" id="content-center">
                 <h2>تک خط </h2>
-                <p class="lead txt-brown">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب
+                <p class="lead txt-brown">توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی
+                  را کسب
                   نمایید!</p>
                 <div id="sectionIcon">
                   <div class="module">
                     <div class="cir1"></div>
                     <div class="cir2"></div>
                     <div class="cir3">
-                      <span id="score">3000</span>
+                      <span id="score">486</span>
                       <img src="./assets/images/gift-box-circle.png" alt="gift-box-circle">
                     </div>
                   </div>
                 </div>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://customerclub.mahaksoft.com/" id="sectionBtn" >خرج امتیاز</a>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="https://customerclub.mahaksoft.com/"
+                  id="sectionBtn">خرج امتیاز</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="carousel-item" ng-repeat="x in slides">
+        <!-- Angular@Mahak -->
+        <section class="content-section">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-lg-10 mx-auto" id="content-center">
+                <h2>{{x.header}}</h2>
+                <p class="lead txt-brown">{{x.subHeader}}</p>
+                <div id="sectionIcon">
+                  <div class="module">
+                    <div class="cir1"></div>
+                    <div class="cir2"></div>
+                    <div class="cir3">
+                      <img src="./assets/images/{{x.img.url}}" alt="{{x.img.alt}}">
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="{{x.button.url}}"
+                  id="sectionBtn">{{x.button.text}}</a>
               </div>
             </div>
           </div>
@@ -114,16 +125,16 @@
         </div>
       </div>
       <div class="row timerNumbers" style="padding-bottom: 0.3rem;
-      padding-top: 0.3rem;
-">
+        padding-top: 0.3rem;
+  ">
         <div class="col myCol" style="padding: 0;">
-          <span class="badge myBadge bg-brown timerTexts" id="minutes">29</span>
+          <span class="badge myBadge bg-brown timerTexts" id="minutes">46</span>
         </div>
         <div class="col no-gutters myCol" style="padding: 0;">
-          <span class="badge myBadge bg-brown timerTexts" id="hours">59</span>
+          <span class="badge myBadge bg-brown timerTexts" id="hours">12</span>
         </div>
         <div class="col myCol" style="padding: 0;">
-          <span class="badge myBadge bg-brown timerTexts" id="days">23</span>
+          <span class="badge myBadge bg-brown timerTexts" id="days">11</span>
         </div>
       </div>
       <div class="row txt-white timerFooter">
@@ -139,5 +150,21 @@
       </div>
     </div>
   </div>
+
+  <!-- Custom JavaScript Files -->
+  <script>
+    const url = document.location.href;
+    const regex = /\?PackageNo=(\d+)/
+    const packageNumber = url.match(regex)[1];
+  </script>
+  <script src="./assets/js/timerCounter.js"></script>
+  <script src="./assets/js/token.js"></script>
+  <script src="./assets/js/getScore.js"></script>
+  <script src="./assets/js/sliderData.js"></script>
+  <script src="./assets/js/carousel.js"></script>
+
+
+
 </body>
+
 </html>
