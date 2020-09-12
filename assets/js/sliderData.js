@@ -7,6 +7,7 @@ function slider(header, subHeader, img, button) {
     this.button = button;
     return this;
 }
+let slides = null;
 app.controller('myCtrl', $scope => {
     $scope.slides = [new slider('بازی کنید، هدیه بگیرید', 'توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب  نمایید', {
         url: 'dices-circle.png',
@@ -57,4 +58,5 @@ app.controller('myCtrl', $scope => {
         url: 'https://www.mahaksoft.com/%d8%a7%d8%b7%d9%84%d8%a7%d8%b9-%d8%b1%d8%b3%d8%a7%d9%86%db%8c/%d8%a7%d8%b1%d8%b3%d8%a7%d9%84-%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa/',
         text: 'کلیک کنید'
     })];
+    slides = $scope.slides;  
 })
