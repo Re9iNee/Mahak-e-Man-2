@@ -1,5 +1,4 @@
 console.group('carousel.js');
-// const headers = ["خرج امتیاز", "بازی", "معرفی مشتری", "تمدید", "ثبت مورد", "فعال سازی", "تایید ایمیل", "خرید مجدد", "انتشار مقاله"]
 $(document).ready(function () {
   let headers = ['خرج امتیاز'];
   for (let slide of slides) {
