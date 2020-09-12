@@ -8,7 +8,13 @@ function slider(header, subHeader, img, button) {
     return this;
 }
 app.controller('myCtrl', $scope => {
-    $scope.slides = [new slider('معرفی مشتری', 'پس از انعقاد قرارداد با مشتریانی که شما معرفی کرده اید متناسب با آن امتیازی به شما تعلق می گیرد', {
+    $scope.slides = [new slider('بازی کنید، هدیه بگیرید', 'توجه داشته باشید که در هر روز فقط یکبار می توانید امتیاز بازی را کسب  نمایید', {
+        url: 'dices-circle.png',
+        alt: 'بازی',
+    }, {
+        text: 'بازی کنید',
+        url: 'https://www.mahaksoft.com/learngame/'
+    }),new slider('معرفی مشتری', 'پس از انعقاد قرارداد با مشتریانی که شما معرفی کرده اید متناسب با آن امتیازی به شما تعلق می گیرد', {
         url: 'customer.png',
         alt: 'معرفی مشتری',
     }, {
