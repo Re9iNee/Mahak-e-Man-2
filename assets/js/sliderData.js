@@ -27,13 +27,13 @@ app.controller('myCtrl', $scope => {
     }, {
         url: 'https://login.mahaksoft.com/supportCredit.aspx',
         text: 'کلیک کنید'
-    }), new slider('ثبت مورد', 'با ثبت هر مورد در سامانه اعلام خطا و امکان 10 امتیاز دریافت کنید', {
+    }), new slider('ثبت مورد', 'با ثبت هر مورد در سامانه اعلام خطا و امکان امتیاز دریافت کنید', {
         url: 'error.png',
         alt: 'ثبت خطا',
     }, {
         url: 'https://login.mahaksoft.com/customerservices/ErrorFeatures.aspx',
         text: 'کلیک کنید'
-    }), new slider('فعال سازی محصول', 'با فعال سازی بسته نرم افزاری خود می توانید 20 امتیاز کسب کنید', {
+    }), new slider('فعال سازی محصول', 'با فعال سازی بسته نرم افزاری خود می توانید امتیاز کسب کنید', {
         url: 'active.png',
         alt: 'فعال سازی',
     }, {
@@ -43,15 +43,15 @@ app.controller('myCtrl', $scope => {
         url: 'email.png',
         alt: 'ایمیل',
     }, {
-        url: 'https://www.mahaksoft.com/comingsoon-hamrahan/',
-        text: 'به زودی'
+        url: 'https://customerclub.mahaksoft.com/',
+        text: 'کلیک کنید'
     }), new slider('خرید مجدد و ارتقا', 'در صورت خرید افزونه جدید و یا ارتقای نرم افزار خود، به میزان خریدتان امتیاز کسب کنید', {
         url: 'sell.png',
         alt: 'خرید مجدد',
     }, {
         url: 'http://login.mahaksoft.com/customerservices/upgradepackage.aspx',
         text: 'کلیک کنید'
-    }), new slider('انتشار مقاله', 'شما برای انتشار هر مقاله ارسالی 50 امتیاز کسب می کنید', {
+    }), new slider('انتشار مقاله', 'شما برای انتشار هر مقاله ارسالی امتیاز کسب می کنید', {
         url: 'article.png',
         alt: 'انتشار مقاله',
     }, {

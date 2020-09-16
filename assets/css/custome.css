@@ -232,9 +232,23 @@ h2 {
 }
 
 /* Circle Animations */
-/* .cir2 {
+/* .cir1, .cir2, .module {
+    border: 1px solid;
+    will-change: height, width;
+}
+.cir2 {
     animation: scale 1s alternate infinite ease;
     animation-delay: 900ms;
+}
+.module {
+    animation: scale3 1s alternate infinite ease;
+}
+@-webkit-keyframes scale3 {
+    from {}
+    to {
+        width: 318px;
+        height: 318px;
+    }
 }
 @-webkit-keyframes scale {
     from {}

@@ -4,14 +4,14 @@ $(document).ready(function () {
   for (let slide of slides) {
     headers.push(slide.header)
   }
+  console.log("Carousel Settings Applied")
   $("#carouselExampleIndicators").carousel({
-    interval: 2000,
+    interval: 3000,
     keyboard: true,
     ride: false,
-    pause: 'hover',
     wrap: true,
   });
-  $("#carouselExampleIndicators").on('slide.bs.carousel', function (event) {
+  $("#carouselExampleIndicators").on('slid.bs.carousel', function (event) {
     let right = event.to + 1;
     let left = event.to - 1;
     if (right >= headers.length) {
