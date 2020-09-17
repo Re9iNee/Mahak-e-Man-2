@@ -83,7 +83,8 @@ body {
     border-radius: 50%;
     background: rgb(255, 203, 5);
     background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
-    filter: drop-shadow(0 10mm 3rem rgba(0, 0, 0, 0.1));
+    box-shadow: 0 10mm 3rem rgba(0, 0, 0, 0.1);
+    transform: translate3d(0, 0, 0);
 }
 
 .cir1 {
@@ -93,11 +94,12 @@ body {
     position: absolute;
     top: 50%;
     right: 50%;
+    transform: translate3d(0, 0, 0);
     transform: translate(50%, -50%);
     border-radius: 50%;
     background: rgb(255, 203, 5);
     background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
-    filter: drop-shadow(0 15mm 3rem rgba(0, 0, 0, 0.1));
+    box-shadow: 0 10mm 3rem rgba(0, 0, 0, 0.1);
 }
 
 .cir2 {
@@ -107,12 +109,12 @@ body {
     position: absolute;
     top: 50%;
     right: 50%;
+    transform: translate3d(0, 0, 0);
     transform: translate(50%, -50%);
     border-radius: 50%;
     background: rgb(255, 203, 5);
     background: linear-gradient(180deg, rgba(255, 203, 5, 1) 0%, rgba(250, 166, 26, 1) 100%);
-    filter: drop-shadow(0 10mm 3rem rgba(0, 0, 0, 0.1));
-
+    box-shadow: 0 10mm 3rem rgba(0, 0, 0, 0.1);
 }
 
 
@@ -231,43 +233,27 @@ h2 {
     min-height: 80vh;
 }
 
-/* Circle Animations */
-/* .cir1, .cir2, .module {
-    border: 1px solid;
-    will-change: height, width;
+/* Circles Animation with box shadows  */
+.cir1, .cir2, .module {
+    animation: bxShadow 2s alternate infinite linear;
+}
+.cir1 {
+    animation-delay: 150ms;
 }
 .cir2 {
-    animation: scale 1s alternate infinite ease;
-    animation-delay: 900ms;
-}
-.module {
-    animation: scale3 1s alternate infinite ease;
-}
-@-webkit-keyframes scale3 {
-    from {}
-    to {
-        width: 318px;
-        height: 318px;
-    }
-}
-@-webkit-keyframes scale {
-    from {}
-
-    to {
-        width: 253px;
-        height: 253px;
-    }
-}
-
-.cir1 {
-    animation: scale2 1s alternate infinite ease;
     animation-delay: 300ms;
 }
-@-webkit-keyframes scale2 {
-    from {}
-
-    to {
-        width: 288px;
-        height: 288px;
+.module {
+    animation-delay: 50ms;
+}
+@keyframes bxShadow {
+    0% {
+        box-shadow: 0 10mm 3rem rgba(0, 0, 0, 0.1); ;
     }
-} */
+    50% {
+        box-shadow: 0 10mm 3rem rgba(0,0,0, 0);
+    }
+    100% {
+        box-shadow: 0 10mm 3rem rgba(0,0,0, 0.1);
+    }
+}

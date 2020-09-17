@@ -19,7 +19,7 @@ app.controller('myCtrl', $scope => {
         url: 'customer.png',
         alt: 'معرفی مشتری',
     }, {
-        url: 'https://intro.mahaksoft.com/',
+        url: `https://intro.mahaksoft.com/?PackageNo=${packageNumber}`,
         text: 'کلیک کنید'
     }), new slider('تمدید پشتیبانی', 'با تمدید یکساله اعتبار پشتیبانی خود امتیاز کسب کنید', {
         url: 'recharge.png',

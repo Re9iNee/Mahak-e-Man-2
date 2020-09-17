@@ -23,5 +23,7 @@ $(document).ready(function () {
     $('#next').html(headers[right])
     $('#prev').html(headers[left])
   })
+
+
 });
 console.groupEnd()
