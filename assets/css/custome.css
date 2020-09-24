@@ -19,8 +19,8 @@ body {
 /* circle modules */
 
 #sectionIcon {
-    /*! padding-top: 1.5rem; */
-    /*! padding-bottom: 3.5rem; */
+    padding-top: 1.5rem;
+    padding-bottom: 3.5rem;
     display: grid;
     justify-content: center;
 }
@@ -151,7 +151,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 28px;
+    font-size: 5.1vh;
 }
 
 .carousel-control-prev-icon,
@@ -176,11 +176,12 @@ h2 {
 
 #prev,
 #next {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
 }
 
 .btn {
     font-size: 1rem;
+    color: #5e5e5e!important;
 }
 
 .timerHeader {
