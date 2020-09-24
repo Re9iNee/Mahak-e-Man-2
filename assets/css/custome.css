@@ -1,6 +1,6 @@
 #sectionIcon {
-    padding-top: 1.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     display: grid;
     justify-content: center;
 }
@@ -10,17 +10,17 @@ body {
     direction: rtl;
 }
 
-.mainIcon {
+/* .mainIcon {
     padding: 6rem;
-}
+} */
 
 
 
 /* circle modules */
 
 #sectionIcon {
-    padding-top: 1.5rem;
-    padding-bottom: 3.5rem;
+    /*! padding-top: 1.5rem; */
+    /*! padding-bottom: 3.5rem; */
     display: grid;
     justify-content: center;
 }
@@ -76,8 +76,8 @@ body {
 /* circle modules */
 .module {
     position: relative;
-    width: 303px;
-    height: 303px;
+    height: 50vh;
+    width: 50vh;
     background: #f06d06;
     z-index: -1;
     border-radius: 50%;
@@ -89,8 +89,8 @@ body {
 
 .cir1 {
     background-color: yellow;
-    height: 274px;
-    width: 274px;
+    height: 45vh;
+    width: 45vh;
     position: absolute;
     top: 50%;
     right: 50%;
@@ -104,8 +104,8 @@ body {
 
 .cir2 {
     background: yellowgreen;
-    height: 246px;
-    width: 246px;
+    height: 38vh;
+    width: 38vh;
     position: absolute;
     top: 50%;
     right: 50%;
@@ -123,6 +123,10 @@ body {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
+}
+.cir3 > img {
+    width: 33vh;
+    height: 33vh;
 }
 
 /* End of Circle Module */
@@ -162,12 +166,12 @@ body {
 
 /* typography */
 h2 {
-    font-size: 2.2rem;
+    font-size: 6vh;
     color: white;
 }
 
 .lead {
-    font-size: 1rem;
+    font-size: 2.9vh;
 }
 
 #prev,
